@@ -1,0 +1,74 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "title": "React Virtual DOM",
+      "category": "react",
+      "question": "What is Virtual DOM and how does it work in React?",
+      "answer": "Virtual DOM is a lightweight copy of the actual DOM. React uses it to improve performance by minimizing direct manipulation of the DOM. When state changes, React first updates the Virtual DOM, compares it with the previous version (diffing), and then efficiently updates only the necessary parts of the actual DOM."
+    },
+    {
+      "id": 2,
+      "title": "JavaScript Closures",
+      "category": "javascript",
+      "question": "Explain closures in JavaScript and provide an example.",
+      "answer": "A closure is the combination of a function bundled together with references to its surrounding state (lexical environment). Example:\n\nfunction createCounter() {\n  let count = 0;\n  return function() {\n    return ++count;\n  };\n}\n\nconst counter = createCounter();\ncounter(); // 1\ncounter(); // 2"
+    },
+    {
+      "id": 3,
+      "title": "Binary Search Tree",
+      "category": "data structures",
+      "question": "What is a Binary Search Tree and what are its advantages?",
+      "answer": "A Binary Search Tree (BST) is a binary tree where each node has at most two children, and for each node, all elements in the left subtree are less than the node's value, and all elements in the right subtree are greater. BSTs provide efficient insertion, deletion, and search operations with an average time complexity of O(log n)."
+    },
+    {
+      "id": 4,
+      "title": "React Hooks",
+      "category": "react",
+      "question": "What are React Hooks and what problems do they solve?",
+      "answer": "React Hooks are functions that allow you to use state and other React features in functional components. They solve several problems:\n1. Reuse stateful logic between components without changing component hierarchy\n2. Split complex components into smaller functions\n3. Use state and other React features without writing class components\n4. Avoid confusion with 'this' binding in classes"
+    },
+    {
+      "id": 5,
+      "title": "JavaScript Promise",
+      "category": "javascript",
+      "question": "What is a Promise in JavaScript and how does it work?",
+      "answer": "A Promise is an object representing the eventual completion (or failure) of an asynchronous operation. It has three states:\n1. Pending: initial state\n2. Fulfilled: operation completed successfully\n3. Rejected: operation failed\n\nExample:\nfetch('api/data')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error(error));"
+    },
+    {
+      "id": 6,
+      "title": "Quick Sort Algorithm",
+      "category": "data structures",
+      "question": "Explain how Quick Sort works and its time complexity.",
+      "answer": "Quick Sort is a divide-and-conquer algorithm that works by selecting a 'pivot' element and partitioning the array around it. Elements smaller than the pivot go to the left, larger to the right. This process is repeated for the sub-arrays.\n\nTime Complexity:\n- Best/Average case: O(n log n)\n- Worst case: O(n²) when the array is already sorted\n- Space complexity: O(log n)"
+    },
+    {
+      "id": 7,
+      "title": "React Context",
+      "category": "react",
+      "question": "What is React Context and when should you use it?",
+      "answer": "React Context provides a way to pass data through the component tree without having to pass props manually at every level. It's useful for sharing data that can be considered 'global' for a tree of React components, such as:\n- Current authenticated user\n- Theme preferences\n- Language preferences\n\nUse Context when data needs to be accessible by many components at different nesting levels."
+    },
+    {
+      "id": 8,
+      "title": "JavaScript Event Loop",
+      "category": "javascript",
+      "question": "Explain the JavaScript Event Loop and its role in asynchronous programming.",
+      "answer": "The Event Loop is a programming construct that waits for and dispatches events in a program. In JavaScript, it works by:\n1. Executing synchronous code in the call stack\n2. Moving async operations to Web APIs\n3. Adding completed async operations to the callback queue\n4. Moving callbacks from the queue to the stack when it's empty (this is the 'tick' of the event loop)\n\nThis enables non-blocking behavior in JavaScript's single-threaded environment."
+    },
+    {
+      "id": 9,
+      "title": "Graph Traversal",
+      "category": "data structures",
+      "question": "Compare Breadth-First Search (BFS) and Depth-First Search (DFS) in graph traversal.",
+      "answer": "BFS and DFS are two primary ways to traverse a graph:\n\nBFS:\n- Uses a queue\n- Explores neighbors before moving to next level\n- Good for finding shortest path\n- Time & Space: O(V + E)\n\nDFS:\n- Uses a stack (or recursion)\n- Explores as far as possible before backtracking\n- Good for maze solving and topological sorting\n- Time: O(V + E), Space: O(V)"
+    },
+    {
+      "id": 10,
+      "title": "React useEffect",
+      "category": "react",
+      "question": "How does useEffect work and what are its common use cases?",
+      "answer": "useEffect is a Hook that lets you perform side effects in function components. Common use cases:\n1. Data fetching\n2. Subscriptions\n3. DOM manipulation\n4. Event listeners\n\nSyntax:\nuseEffect(() => {\n  // effect code\n  return () => {\n    // cleanup code\n  };\n}, [dependencies]);\n\nThe cleanup function runs before the component unmounts or before re-running the effect."
+    }
+  ]
+} 
