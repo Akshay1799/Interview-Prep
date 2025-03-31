@@ -7,7 +7,7 @@ import Home from './pages/Home'
 import Bookmarks from './pages/Bookmarks'
 import QuizMode from './pages/QuizMode'
 import Footer from './components/Footer'
-import './App.css'
+// import './App.css'
 
 function NavLink({ to, children }) {
   const location = useLocation()
